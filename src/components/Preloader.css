@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  font-family: 'Orbitron', 'Poppins', sans-serif;
+}
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 30vh;
+  font-family: 'Orbitron', 'Poppins', sans-serif;
+}
+
+.preloader .logo {
+  width: clamp(100px, 20vw, 200px);
+  height: clamp(100px, 20vw, 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preloader .logo span {
+  font-size: clamp(2rem, 10vw, 4rem);
+  background: linear-gradient(90deg, #000000, #333333, #666666, #999999, #CCCCCC);
+  font-weight: 900;
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Orbitron', 'Poppins', sans-serif;
+  animation: fade 1.5s ease-in-out forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.preloader .char {
+  font-size: clamp(3rem, 15vw, 8rem);
+  line-height: 1;
+}

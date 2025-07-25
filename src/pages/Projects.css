@@ -1,0 +1,110 @@
+.projects-container {
+  font-family: 'Orbitron', 'Poppins', sans-serif;
+  padding: 4rem 2rem;
+  color: #ccc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.project{
+  top: 20% !important;
+  left: -50% !important;
+}
+.projects-heading {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  letter-spacing: 2px;
+  color: #fff;
+  background: linear-gradient(90deg, #222, #333, #666, #999);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.1);
+}
+
+.project-image {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-title {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+}
+
+.project-description {
+  font-size: 1.05rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .projects-heading {
+    font-size: 2.4rem;
+  }
+
+  .project-title {
+    font-size: 1.4rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+  }
+}

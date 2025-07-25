@@ -1,0 +1,117 @@
+.skills-container {
+  font-family: 'Orbitron', 'Poppins', sans-serif;
+  padding: 4rem 2rem;
+  color: #ccc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skill{
+  opacity: 1 !important;
+   top: 20% !important;
+  
+} 
+.skills-heading {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  letter-spacing: 2px;
+  color: #fff;
+   background: linear-gradient(90deg, #222, #333, #666, #999);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+}
+
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
+  justify-items: center;
+}
+
+.skill-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem 1rem;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.skill-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+.skill-icon {
+  font-size: 3.5rem;
+  color: #ccc;
+  margin-bottom: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+  color: #fff;
+}
+
+.skill-name {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #ccc;
+  letter-spacing: 1px;
+}
+
+
+@media (max-width: 768px) {
+  .skills-heading {
+    font-size: 2.4rem;
+  }
+
+  .skill-card {
+    width: 140px;
+    height: 140px;
+    padding: 1.2rem;
+  }
+
+  .skill-icon {
+    font-size: 2.8rem;
+  }
+
+  .skill-name {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .skill-card {
+    width: 120px;
+    height: 120px;
+    padding: 1rem;
+  }
+
+  .skill-icon {
+    font-size: 2.4rem;
+  }
+
+  .skill-name {
+    font-size: 1rem;
+  }
+}
