@@ -8,7 +8,7 @@
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: 'Orbitron', 'Poppins', sans-serif;
   background: #000;
   background-size: 400% 400%;
@@ -37,7 +37,7 @@ body {
 .education-section {
   color: #cccccc;
   font-family: 'Poppins', sans-serif;
-  position: absolute;
+  position: relative;
   top: 10%;
   width: 100%;
   padding: 50px 20px;
@@ -52,10 +52,14 @@ body {
 .timeline-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
   gap: 40px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 0 10px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .timeline-item {
@@ -63,8 +67,8 @@ body {
   border: 1px solid #333;
   padding: 20px;
   border-radius: 12px;
-  width: 90%;
-  max-width: 600px;
+  width: 30%;
+  min-width: 280px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
@@ -110,6 +114,7 @@ body {
   font-family: 'Tektur', 'Orbitron', sans-serif;
 }
 
+/* Responsive for tablets and below */
 @media (max-width: 768px) {
   .back {
     font-size: 80vw;
@@ -120,11 +125,23 @@ body {
     font-size: 2rem;
   }
 
+  .timeline-container {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .timeline-item {
+    width: 100% !important;
+    max-width: 95%;
+  }
+
   .score {
     font-size: 36px;
   }
 }
 
+/* Responsive for small mobile screens */
 @media (max-width: 480px) {
   .back {
     font-size: 100vw;
@@ -134,4 +151,12 @@ body {
   .score {
     font-size: 28px;
   }
-} 
+
+  .timeline-content h3 {
+    font-size: 18px;
+  }
+
+  .timeline-content p {
+    font-size: 13px;
+  }
+}
